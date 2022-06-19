@@ -1,14 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta  charset="UTF-8" name="Wenezuelska palarnia kawy">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coffee-Shop</title>
-  <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+  <title>Projekt-coffee</title>
+  <link href="vendor/css/bootstrap-grid.rtl.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/css/Glyphter.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  
+  <section class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <h2>EL TIGRE</h2>
+          <p>VENEZUELA COFFEE BEANS</p>
+        </div>
+        <div class="col-6 navbar">
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#product">PRODUCT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact-us">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row main-title">
+        <h1>HOME OF<br>ORIGINAL TASTES</h1>
+        <p>DISCOVER</p>
+        <a href="#product">icon<i class="icon-arrow-down" alt="arrow-piture"></i></a>
+      </div>
+    </div>
+  </section>
+  <section class="pages">
+    <section id="home">
+      <div class="products">
+        <div class="container" data-container="productsContainer">
+        </div>
+      </div>
+      <div class="about-us">
+        <div class="wrapper">
+        </div>
+        <div class="container">
+          <h1>ABOUT US</h1>
+          <p>Who are we? Just a bunch of friends with a love for a good coffee
+              and desire to create something new, something original.</p>
+          <p>Our coffees reflect us - young, wild and free.
+              We are on the journey of new tastes...</p>
+          <p>Join us!</p>
+        </div>
+      </div>
+    </section>
+    <section id="product">
+      <div class="products">
+        <div class="container" data-container="productsContainer">
+        </div>
+      </div>
+    </section>
+    <section id="contact-us">
+      <div class="container">
+        <h1>CONTACT US</h1>
+        <form action="/action_page.php">
+          <label for="name">NAME</label>
+          <input type="text" id="name" name="name" value="">
+          <label for="title">TITLE</label>
+          <input type="text" id="title" name="title" value="">
+          <label for="message">MESSAGE</label>
+          <textarea row="3" type="text" id="message" name="message" value="">
+          </textarea>
+          <button type="submit" class="btn">SUBMIT</button>
+        </form>
+      </div>
+    </section>
+  </section>
+  <footer>
+    <p>&copy; 2021 EL TIGRE inc.</p>
+  </footer>
+  <script id="template-products" type="text/x-handlebars-template">
+    <div class="section-header">
+      <h1>PRODUCTS</h1>
+    </div>
+    <div class="products">
+      <div class="row">
+        <div class="col-6 product-description">
+          <h2>01 {{01.name}}</h2>
+          <p>{{01.description}}</p>
+          <div>
+            <div class="row">
+              <div class="col-6">
+                <p class="parameters">ROASTING: <span>{{01.roasting }}</span></p>
+                <p class="parameters">INTENSITY: <span>{{01.intensity}}</span></p>
+              </div>
+              <div class="col-6">
+                <img src="images/stamp.webp" class="stamp {{#if 01.popular}}visible{{/if}}" alt="stamp">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 product"><img src= "{{01.image}}" alt="coffee-1">
+        </div>
+      </div>
+      <div class="row between">
+        <div class="col-6 product"><img src= "{{02.image}}" alt="coffee-2">
+        </div>
+        <div class="col-6 product-description">
+          <h2>02 {{02.name}}</h2>
+          <p>{{02.description}}</p>
+          <div>
+            <div class="row">
+              <div class="col-6">
+                <p class="parameters">ROASTING: <span>{{02.roasting}}</span></p>
+                <p class="parameters">INTENSITY: <span>{{02.intensity}}</span></p>
+              </div>
+              <div class="col-6">
+                <img src="images/stamp.webp" class="stamp {{#if 02.popular}}visible{{/if}}" alt="stamp">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 product-description">
+          <h2>03 {{03.name}}</h2>
+          <p>{{03.description}}</p>
+          <div>
+            <div class="row">
+              <div class="col-6">
+                <p class="parameters">ROASTING: <span>{{03.roasting}}</span></p>
+                <p class="parameters">INTENSITY: <span>{{03.intensity}}</span></p>
+              </div>
+              <div class="col-6">
+                <img src="images/stamp.webp" class="stamp {{#if 03.popular}}visible{{/if}}" alt="stamp">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 product"><img src="{{03.image}}" alt="coffee-3"></div>
+      </div>
+    </div>
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script src="js/app.js" type="module"></script>
 </body>
 </html>

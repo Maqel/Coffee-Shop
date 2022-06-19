@@ -1,0 +1,15 @@
+// Normalize default styles
+@import '_normalize.scss';
+
+// Variables
+@import '_variables.scss';
+
+//page styles
+@import 'pages/ContactPage';
+@import 'pages/ProductPage';
+
+// Common styles
+@import '_layout.scss';
+@import '_global.scss';
+@import '_typography.scss';
+@import '_mixins.scss';

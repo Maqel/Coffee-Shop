@@ -1,0 +1,46 @@
+#contact-us {
+  padding: 30px;
+  text-align: center;
+  font-family: $font-header;
+  font-size: 36px;
+  font-weight: $font-semibold;
+  margin: 0 auto;
+  @media (max-width: 599px){
+    font-size: 0.875rem;
+    overflow: hidden;
+  }
+
+  label {
+    display: block;
+  }
+}
+
+input,
+textarea {
+  margin: 20px 0;
+  padding: 10px 0;
+  border: solid;
+}
+
+button {
+  display: block;
+  font-size: 30px;
+  font-stretch: expanded;
+  font-weight: bold;
+  background-color: $main-color;
+  color: $bright-color;
+  height: 80px;
+  width: 200px;
+  border: none;
+  letter-spacing: 4px;
+  margin: 0 auto;
+  cursor: pointer;
+  @media (max-width: 599px){
+    font-size: 0.875rem;
+    overflow: hidden;
+  }
+
+  :hover {
+    color: $dark-color;
+  }
+}

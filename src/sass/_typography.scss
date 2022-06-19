@@ -1,0 +1,32 @@
+/*---SECTION TITLE---*/
+h1 {
+  font-family: $font-header;
+  font-display: swap;
+  font-size: 55px;
+  font-weight: $font-bold;
+  font-style: normal;
+  color: $main-color;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 8px;
+  @media (max-width: 599px) {
+    font-size: 0.875rem;
+  }
+  @media (min-width: 600px) and (max-width: 768px){
+    font-size: 1.5rem;
+  }
+}
+
+p {
+  font-family: $font-header;
+  font-display: swap;
+  color: $bright-color;
+  @media (max-width: 599px){
+    font-size: 0.875rem;
+    overflow: hidden;
+  }
+  @media (min-width: 600px) and (max-width: 768px){
+    font-size: 1.5rem;
+    overflow: hidden;
+  }
+}
