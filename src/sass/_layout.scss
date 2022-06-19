@@ -53,7 +53,7 @@
       color: $bright-color;
     }
 
-    a {
+    #ico {
       font-size: 0;
     }
   }
@@ -114,6 +114,9 @@
         font-size: 0.875rem;
         margin: 48px;
       }
+    }
+    a:hover {
+      color: $main-color;
     }
   }
 }
