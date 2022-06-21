@@ -1,5 +1,5 @@
 export const select = {
-  cartPoducts : '#template-products',
+  productList : '#template-products',
   productsContainer: '[data-container="productsContainer"]',
   product: '#product',
   contact: '#contact-us',
@@ -21,5 +21,5 @@ export const settings = {
 
 
 export const templates = {
-  cartProducts: Handlebars.compile(document.querySelector(select.cartPoducts).innerHTML),
+  productList: Handlebars.compile(document.querySelector(select.productList).innerHTML),
 };

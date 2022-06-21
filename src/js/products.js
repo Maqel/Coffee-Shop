@@ -16,24 +16,19 @@ class Products {
       })
       .then(function(data){
         const serverData = data;
-        thisProducts.initPage(serverData);
+        thisProducts.initProductView(serverData);
       });
   }
 
-  initPage(thisData) {
+  initProductView(thisData) {
 
     const thisProduct = this;
-    const generatedHTML = templates.cartProducts(thisData);
+    const generatedHTML = templates.productList(thisData);
     thisProduct.element = utils.createDOMFromHTML(generatedHTML);
     const productsContainer = document.querySelectorAll(select.productsContainer);
 
     for (const containers of productsContainer) {
       containers.appendChild(thisProduct.element.cloneNode(true));
-    }
-    const startSections = document.querySelectorAll(select.startingPages);
-
-    for (const section of startSections) {
-      section.classList.add(select.hidden);
     }
   }
 }

@@ -15,9 +15,9 @@ const app = {
     const thisApp = this;
 
     thisApp.dom = {},
-    thisApp.dom.subPages = document.querySelectorAll(select.pages),
-    thisApp.dom.contact = document.querySelector(select.contact),
-    thisApp.dom.home = document.querySelector(select.home),
+    thisApp.dom.subPages = document.querySelectorAll(select.pages);
+    thisApp.dom.contact = document.querySelector(select.contact);
+    thisApp.dom.home = document.querySelector(select.home);
     thisApp.dom.product = document.querySelector(select.product);
   },
 
@@ -46,6 +46,12 @@ const app = {
         const clickedElement = event.target.getAttribute('href').substring(1);
         thisApp.initActivatePage(clickedElement);
       });
+    }
+
+    const startSections = document.querySelectorAll(select.startingPages);
+
+    for (const section of startSections) {
+      section.classList.add(select.hidden);
     }
   }
 };
