@@ -11,19 +11,19 @@ class Products {
     const url =  settings.db.url + '/' + settings.db.data;
 
     fetch(url)
-      .then(function(Response){
-        return Response.json();
+      .then(function(response){
+        return response.json();
       })
       .then(function(data){
         const serverData = data;
-        thisProducts.initPage(serverData);
+        thisProducts.initProductView(serverData);
       });
   }
 
   initProductView(thisData) {
 
     const thisProduct = this;
-    const generatedHTML = templates.cartProducts(thisData);
+    const generatedHTML = templates.productList(thisData);
     thisProduct.element = utils.createDOMFromHTML(generatedHTML);
     const productsContainer = document.querySelectorAll(select.productsContainer);
 
