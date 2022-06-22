@@ -92,37 +92,37 @@
     <div class="products">
       <div class="row">
         <div class="col-6 product-description">
-          <h2>01 {{01.name}}</h2>
-          <p>{{01.description}}</p>
+          <h2>01 {{first.name}}</h2>
+          <p>{{first.description}}</p>
           <div>
             <div class="row">
               <div class="col-6">
-                <p class="parameters">ROASTING: <span>{{01.roasting }}</span></p>
-                <p class="parameters">INTENSITY: <span>{{01.intensity}}</span></p>
+                <p class="parameters">ROASTING: <span>{{first.roasting }}</span></p>
+                <p class="parameters">INTENSITY: <span>{{first.intensity}}</span></p>
               </div>
               <div class="col-6">
-                <img src="images/stamp.webp" class="stamp {{#if 01.popular}}visible{{/if}}" alt="stamp">
+                <img src="images/stamp.webp" class="stamp {{#if first.popular}}visible{{/if}}" alt="stamp">
               </div>
             </div>
           </div>
         </div>
-        <div class="col-6 product"><img src= "{{01.image}}" alt="coffee-1">
+        <div class="col-6 product"><img src= "{{first.image}}" alt="coffee-1">
         </div>
       </div>
       <div class="row between">
-        <div class="col-6 product"><img src= "{{02.image}}" alt="coffee-2">
+        <div class="col-6 product"><img src= "{{second.image}}" alt="coffee-2">
         </div>
         <div class="col-6 product-description">
-          <h2>02 {{02.name}}</h2>
-          <p>{{02.description}}</p>
+          <h2>02 {{second.name}}</h2>
+          <p>{{second.description}}</p>
           <div>
             <div class="row">
               <div class="col-6">
-                <p class="parameters">ROASTING: <span>{{02.roasting}}</span></p>
-                <p class="parameters">INTENSITY: <span>{{02.intensity}}</span></p>
+                <p class="parameters">ROASTING: <span>{{second.roasting}}</span></p>
+                <p class="parameters">INTENSITY: <span>{{second.intensity}}</span></p>
               </div>
               <div class="col-6">
-                <img src="images/stamp.webp" class="stamp {{#if 02.popular}}visible{{/if}}" alt="stamp">
+                <img src="images/stamp.webp" class="stamp {{#if second.popular}}visible{{/if}}" alt="stamp">
               </div>
             </div>
           </div>
@@ -130,21 +130,21 @@
       </div>
       <div class="row">
         <div class="col-6 product-description">
-          <h2>03 {{03.name}}</h2>
-          <p>{{03.description}}</p>
+          <h2>03 {{third.name}}</h2>
+          <p>{{third.description}}</p>
           <div>
             <div class="row">
               <div class="col-6">
-                <p class="parameters">ROASTING: <span>{{03.roasting}}</span></p>
-                <p class="parameters">INTENSITY: <span>{{03.intensity}}</span></p>
+                <p class="parameters">ROASTING: <span>{{third.roasting}}</span></p>
+                <p class="parameters">INTENSITY: <span>{{third.intensity}}</span></p>
               </div>
               <div class="col-6">
-                <img src="images/stamp.webp" class="stamp {{#if 03.popular}}visible{{/if}}" alt="stamp">
+                <img src="images/stamp.webp" class="stamp {{#if third.popular}}visible{{/if}}" alt="stamp">
               </div>
             </div>
           </div>
         </div>
-        <div class="col-6 product"><img src="{{03.image}}" alt="coffee-3"></div>
+        <div class="col-6 product"><img src="{{third.image}}" alt="coffee-3"></div>
       </div>
     </div>
   </script>
