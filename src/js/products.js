@@ -1,7 +1,7 @@
 import { select, settings, templates } from './settings.js';
 import utils from './utils.js';
 
-class Products {
+class products {
   constructor() {
     this.getData();
   }
@@ -33,4 +33,4 @@ class Products {
   }
 }
 
-export default Products;
+export default products;
