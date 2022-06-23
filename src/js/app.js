@@ -1,4 +1,4 @@
-import Products from './Products.js';
+import products from './products.js';
 import { select } from './settings.js';
 
 const app = {
@@ -6,7 +6,7 @@ const app = {
   init: function () {
     const thisApp = this;
 
-    new Products();
+    new products();
     thisApp.getElement();
     thisApp.initPageListener();
   },
